@@ -24,11 +24,6 @@
     justify-items: stretch;
   }
   
-  .frameActive {
-    composes: mainGrid;
-    /* grid-template-rows: 10px 0; */
-  }
-  
   .masthead {
     background: #4530a5;
     color: white;
@@ -45,11 +40,6 @@
     position: relative;
   }
   
-  .masthead .breadcrumb {
-    font-size: 0px;
-    opacity: 0;
-    transition: all 200ms, opacity 0 linear 200ms;
-  }
   
   .h1 {
     cursor: pointer;
@@ -95,143 +85,4 @@
     text-align: right;
   }
   
-  .frameActive .h1 {
-    margin-bottom: 0;
-    padding-top: 0;
-  }
   
-  .frameActive .h1 .sep {
-    display: inline;
-  }
-  
-  .frameActive .breadcrumb {
-    display: inline-block;
-    opacity: 1;
-    font-size: 18px;
-  }
-  
-  .steps,
-  .dropdown,
-  .credits,
-  .subtitle {
-    transition: all 200ms, opacity 0 linear 2s;
-  
-  }
-  
-  .frameActive .steps,
-  .frameActive .dropdown,
-  .frameActive .credits,
-  .frameActive .subtitle {
-    transform: scale(0);
-    height: 0;
-    opacity: 0;
-    margin: 0;
-  
-  }
-  
-  .steps {
-  
-    text-align: left;
-  }
-  
-  .stepDescription, .stepDescription * {
-    cursor: default;
-    pointer-events: none;
-    color: #fff;
-  }
-  
-  
-  .mainGrid iframe {
-    border: none;
-    grid-area: content;
-  }
-  
-  .overlay {
-    grid-area: content;
-    overflow: scroll;
-  }
-  
-  .overlay::after {
-    content: " ";
-    height: 1000px;
-    display: block;
-  }
-  
-  .loader {
-    grid-area: content;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: 1;
-    background: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .steps {
-    margin-left: auto;
-    max-width: 1140px;
-    padding: 0 .5rem;
-  
-    margin-right: auto;
-    display: none;
-  }
-  
-  
-  
-  @media (min-width:568px) {
-    .h1 {
-      padding-top: 0;
-    }
-  
-    .credits {
-  
-      position: absolute;
-      top: 0;
-      margin-top: 1rem;
-      padding-right: 1rem;
-      max-width: 1140px;
-      margin-left: auto;
-      margin-right: auto;
-      right: 0;
-      left: 0;
-    }
-  }
-  
-  @media (min-width:1024px) {
-  
-    .h1 {
-      font-size: 46px;
-      margin-bottom: 1rem;
-    }
-  
-    .subtitle {
-      margin-bottom: 1.5rem;
-      max-width: 800px;
-      margin-left: 0;
-  
-    }
-  
-    .frameActive .h1 {
-      font-size: 18px;
-    }
-  
-    .masthead {
-      padding: 2.5rem 1rem 1.5rem 1rem;
-    }
-  
-    .frameActive .masthead {
-      padding: 1rem;
-    }
-  
-    .steps {
-      display: block;
-    }
-  
-    .dropdown {
-      display: none;
-    }
-  }
