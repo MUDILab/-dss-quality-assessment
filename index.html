@@ -10,6 +10,20 @@
             text-align: center;
             padding: 10px;
         }
+		
+		.btn {
+    background-color: #008CBA; /* Blue background */
+    border: none;  /* Remove borders */
+    color: white;  /* White text */
+    padding: 14px 28px;  /* Some padding */
+    font-size: 16px;  /* Set a font size */
+    cursor: pointer;  /* Mouse pointer on hover */
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+    background-color: #0056b3;
+}
 
         /* Style for the lower div */
         #lowerDiv {
@@ -33,6 +47,7 @@
             width: 100%;
             border-collapse: collapse;
             border: none;
+			font-family: Arial;
         }
         th, td {
             border: none;
@@ -53,15 +68,24 @@
                 <td style="font-size: 12px;">developed at MUDI Lab @ UNIMIB</td>
             </tr>
             <tr>
-                <td style="font-size: 14px; text-align: left; colspan="6">Online calculator for the assessment of the quality of AI-based decision support systems, along different and complementary dimensions, such as data reliability, robustness, calibration, utility and impact on human decision making.<br>It's a five step journey, but you can select any tool below.</td>
+                <td style="font-size: 14px; text-align: left; colspan=6">Online calculator for the assessment of the quality of AI-based decision support systems, along different and complementary dimensions, such as data reliability, robustness, calibration, utility and impact on human decision making.<br>It's a six step journey, but you can select any tool below.<br><br></td>
             </tr>
 <tr>
-    <td style="font-size: 14px; text-align: center; width: 16.66%;" onclick="changeContent('file', 'https://datareliability.pythonanywhere.com/')">Data Reliability</td>
-    <td style="font-size: 14px; text-align: center; width: 16.66%;" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/')">Data Similarity</td>
-    <td style="font-size: 14px; text-align: center; width: 16.66%;" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/')">Model Calibration</td>
-    <td style="font-size: 14px; text-align: center; width: 16.66%;" onclick="changeContent('file', 'utility.html')">Model Utility</td>
-    <td style="font-size: 14px; text-align: center; width: 16.66%;" onclick="changeContent('url', 'https://qualiml.pythonanywhere.com/')">Model Robustness</td>
-    <td style="font-size: 14px; text-align: center; width: 16.66%;" onclick="changeContent('url', 'https://haiiassessment.pythonanywhere.com/')">Human Interaction</td>
+<td style="font-size: 14px; text-align: center;">
+    <button class="btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/')">Data Reliability</button>
+	</td>
+	<td style="font-size: 14px; text-align: center;">
+    <button class="btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/')">Data Similarity</button></td>
+	<td style="font-size: 14px; text-align: center;">
+	<button class="btn" onclick="changeContent('file',  'utility.html')">Model Utility</button></td>
+	<td style="font-size: 14px; text-align: center;">
+	<button class="btn" onclick="changeContent('url',  'https://calibrationassessment.pythonanywhere.com/')">Model Calibration</button></td>
+	<td style="font-size: 14px; text-align: center;">
+	<button class="btn" onclick="changeContent('url',  'https://qualiml.pythonanywhere.com/'')">Model Robustness</button>
+	</td>
+	<td style="font-size: 14px; text-align: center;">
+	<button class="btn" onclick="changeContent('url',  'https://haiiassessment.pythonanywhere.com/')">Human-System Interaction</button></td>
+
 </tr>
 
                 
