@@ -4,8 +4,13 @@
 <head>
     <title>Tool Frontpage</title>
     <style>
+
+        #title {
+            background-color: white;
+            text-align: left; 
+        }
         /* Style for the upper div */
-        #upperDiv {
+        .upperDiv {
             background-color: #a1a1a1;
             text-align: center;
             padding: 10px;
@@ -56,7 +61,16 @@
 </head>
 <body>
 
-    <div id="upperDiv">
+    <div id="title">
+        DSS Quality Assessment Data Reliability
+    </div>
+    <div class="upperDiv">
+        Online calculator for the assessment of the quality of AI-based decision support systems, along different and complementary dimensions, such as data reliability,
+         robustness, calibration, utility and impact on human decision making.<br>
+        It's a five step journey, but you can select any tool below.
+    </div>
+
+    <div class="upperDiv">
         <button class="btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/')">Data Reliability</button>
         <span class="btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/')">Data Similarity</span>
         <span class="btn" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/')">Model Calibration</span>
@@ -66,8 +80,7 @@
     </div>
 
                 
-        </table>
-    </div>
+    
 
     <div id="lowerDiv">
         <iframe id="contentFrame"></iframe>
