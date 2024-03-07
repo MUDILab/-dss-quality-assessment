@@ -1,44 +1,102 @@
-
 <!DOCTYPE html>
 <html>
 <head>
     <title>Tool Frontpage</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
     <style>
 
+.spacing{
+            margin-left: 20px;
+            margin-right: 20px;
+            
+        }
+
         #title {
-            font-size: 30px;
+            font-size: 50px;
             background-color: white;
             text-align: center; 
+            font-weight: bold;
+            font-family: "Open Sans", sans-serif;
+            margin: 50px 0px 50px 0px;
         }
+
+        .font {
+            font-weight: bold;
+            font-family: "Open Sans", sans-serif;
+        }
+        
         /* Style for the upper div */
         .upperDiv {
-            background-color: #a1a1a1;
+            margin:auto;
+            width: fit-content;
+            font-family:  'arial';
+            font-size: 18px;
+            text-align: left;
+            padding: 0px 20px 40px 20px;
+        }
+
+        /* Style for button div */
+        .buttonDiv {
+            width: fit-content;
+            border-top: 1px solid lightgray;
             text-align: center;
-            padding: 10px;
+            margin:auto;
+        }
+
+        .text-spacing{
+            margin: 0px 0px 0px 6px;
         }
 		
-		.btn {
-    background-color: #008CBA; /* Blue background */
-    border: none;  /* Remove borders */
-    color: white;  /* White text */
-    padding: 14px 28px;  /* Some padding */
-    font-size: 16px;  /* Set a font size */
-    cursor: pointer;  /* Mouse pointer on hover */
-}
+		
+		.btn{
+			background:rgba(211, 211, 211, 0.158);
+			border:none;
+			margin:10px auto 0;
+            text-align: left;
+			font-size: 20px;
+			outline: none;
+			color: rgb(90, 90, 90);
+			transition: 0.3s;
+			padding: 10px;
+		}
 
-/* Darker background on mouse-over */
-.btn:hover {
-    background-color: #0056b3;
-}
+        li{
+            width: 100%;
+            list-style: none;
+            word-wrap: break-word;
+            display: block;
+        }
+        ul{
+            padding: 0px 20px 0px 20px;
+            display: block;
+        }
+		
+
+        li:hover{
+            transition: 0s;
+            color: rgb(34, 37, 193);
+            background-color: rgba(118, 176, 230, 0.184);
+        }
 
         /* Style for the lower div */
         #lowerDiv {
-            position: absolute;
-            top: 170px;
+            position:relative;
+            height: 700px;
+            left:0;
+            right:0;
             bottom: 0;
-            left: 0;
-            right: 0;
-            padding: 10px;
+            padding: 20px;
         }
 
         /* Style for iframe */
@@ -46,6 +104,13 @@
             width: 100%;
             height: 100%;
             border: none;
+            min-height: 80vh;
+            
+        }
+
+        .card{
+            border:none;
+            padding: none;
         }
 
         /* Style for table */
@@ -58,39 +123,130 @@
         th, td {
             border: none;
         }
+
+        .separator{
+            border-top: 1px solid lightgray;
+            padding-bottom: 20px;
+        }
+
+        #dropdownMenuButton{
+            float: left;
+            margin: 20px 20px 20px 20px;
+        }
+
+        .sidebar-body{
+            margin-top: 50px;
+        }
+
+        .dropdown-menu{
+            width: 70%;
+        }
+
+        .dropdown-button:hover{
+            color: white !important;
+        }
+        .dropdown-button:focus{
+            color: white !important;
+        }
+
     </style>
 </head>
 <body>
-
-    <div id="title">
-        DSS Quality Assessment Data Reliability
+    <div id="title" class="spacing">
+        DSS Quality Assessment
     </div>
-    <div class="upperDiv">
-        Online calculator for the assessment of the quality of AI-based decision support systems, along different and complementary dimensions, such as data reliability,
-         robustness, calibration, utility and impact on human decision making.<br>
+        
+    <div class="upperDiv spacing">
+        Online calculator for the assessment of the quality of AI-based decision support systems, along different and complementary dimensions,<br>
+        such as data reliability, robustness, calibration, utility and impact on human decision making.<br>
         It's a five step journey, but you can select any tool below.
     </div>
 
-    <div class="upperDiv">
-        <button class="btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/')">Data Reliability</button>
-        <button class="btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/')">Data Similarity</button>
-        <button class="btn" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/')">Model Calibration</button>
-        <button class="btn" onclick="changeContent('file', 'utility.html')">Model Utility</button>
-        <button class="btn" onclick="changeContent('url', 'https://qualiml.pythonanywhere.com/')">Model Robustness</button>
-        <button class="btn" onclick="changeContent('url', 'https://haiiassessment.pythonanywhere.com/')">Human Interaction</button>
-    </div>
+    <div class="separator spacing"></div>
 
-                
     
+    <div class="container-fluid d-flex h-100 flex-column ">
+        <div class="row">
+            <div class="bg-white col-xl-3 col-md-5 col-lg-4 col-sm-12 ">
+                
+                <div class="dropdown d-md-none">
+                    <button class="btn btn-primary dropdown-toggle dropdown-button" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                        
+                        <i class="glyphicon glyphicon-wrench"></i><span class="font text-spacing">TOOLS</span>
+                        
+                    </button>
 
-    <div id="lowerDiv">
-        <iframe id="contentFrame"></iframe>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <ul>
+                            <li id="datareliability-li"        class="li btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/', this.id)">
+                                Data Reliability
+                            </li>
+                            <li id="psicorrespondence-li"      class="li btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/', this.id)">
+                                Data Similarity
+                            </li>
+                            <li  id="calibrationassessment-li" class="li btn" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/', this.id)">
+                                Model Calibration
+                            </li>
+                            <li id="utility-li"                class="li btn" onclick="changeContent('file', 'utility.html', this.id)">
+                                Model Utility
+                            </li>
+                            <li id="qualiml-li"                class="li btn" onclick="changeContent('url', 'https://qualiml.pythonanywhere.com/', this.id)">
+                                Model Robustness
+                            </li>
+                            <li id="haiiassessment-li"         class="li btn" onclick="changeContent('url', 'https://haiiassessment.pythonanywhere.com/', this.id)">
+                                Human Interaction
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="collapse d-md-block" id="sidebar-collapse">
+
+                    <div class="card card-body sidebar-body">
+                        <ul>
+                            <li id="sidebar-datareliability-li"        class="li btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/', this.id)">
+                                Data Reliability
+                            </li>
+                            <li id="sidebar-psicorrespondence-li"      class="li btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/', this.id)">
+                                Data Similarity
+                            </li>
+                            <li  id="sidebar-calibrationassessment-li" class="li btn" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/', this.id)">
+                                Model Calibration
+                            </li>
+                            <li id="sidebar-utility-li"                class="li btn" onclick="changeContent('file', 'utility.html', this.id)">
+                                Model Utility
+                            </li>
+                            <li id="sidebar-qualiml-li"                class="li btn" onclick="changeContent('url', 'https://qualiml.pythonanywhere.com/', this.id)">
+                                Model Robustness
+                            </li>
+                            <li id="sidebar-haiiassessment-li"         class="li btn" onclick="changeContent('url', 'https://haiiassessment.pythonanywhere.com/', this.id)">
+                                Human Interaction
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>  
+                 
+                
+            </div>
+            <div class="col-xl-9 col-md-7 col-lg-8 col-sm-12 min-vh-100">
+                <div class="card card-body">
+                    <iframe id="contentFrame"></iframe>
+                </div>
+                
+            </div>
+        </div>
+
     </div>
 
+   
+	
     <script>
         // JavaScript function to change the content of the lower div
-        function changeContent(contentType, contentSource) {
+        function changeContent(contentType, contentSource, id) {
             let contentFrame = document.getElementById('contentFrame');
+            let button = document.getElementById(id);
+            
+            setClickedButton(button);
             if (contentType === 'file') {
                 contentFrame.src = contentSource;
             } else if (contentType === 'url') {
@@ -98,17 +254,40 @@
             }
         }
 
+        function setClickedButton(button){
+            let allButtons = document.getElementsByClassName('btn');
+            console.log(allButtons);
+            for(let i of allButtons){
+                i.style.borderRight = null;
+                i.style.color = "rgb(90, 90, 90)";
+                i.style.backgroundColor = null;
+            }
+            button.style.backgroundColor = "rgba(118, 176, 230, 0.184)";
+            button.style.borderRight = "thick solid #0000FF"; 
+            button.style.color  ="rgb(34, 37, 193)";
+        }
+
         // JavaScript function to resize the iframe when the browser window is resized
         function resizeFrame() {
-            let upperDivHeight = document.getElementById('upperDiv').offsetHeight;
+            let upperDivHeight = document.getElementsByClassName('upperDiv').offsetHeight;
             let windowHeight = window.innerHeight;
-            let lowerDiv = document.getElementById('lowerDiv');
-            lowerDiv.style.height = (windowHeight - upperDivHeight) + 'px';
+            //let lowerDiv = document.getElementById('lowerDiv');
+            //lowerDiv.style.height = (windowHeight - upperDivHeight) + 'px';
+        }
+        
+        function setupContent(id){
+
+            changeContent('url',  'https://datareliability.pythonanywhere.com/', id);
+
         }
 
         // Initial resizing
         resizeFrame();
+        setupContent('sidebar-datareliability-li');
     </script>
-
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 </body>
 </html>
