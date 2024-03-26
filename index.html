@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minerva Project :: DSS Quality Assessment Tool </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <!--CSS-->
+    <link rel="stylesheet" href="./css/style.css" /> 
+    <meta name="color-scheme" content="only light">
+
+</head>
+<body>
+
+    <div id="logo" onclick="showLandingPage()">
+        <img id="logo-image" src="./logo/CQE.svg">
+    </div>
+
+
+    <div id="title" class="spacing">
+        DSS Quality Assessment
+    </div>
+        
+    <div class="upperDiv spacing">
+        An integrated online calculator designed to assist the evaluation of the quality of AI-based decision support systems across multiple and complementary aspects, <br>
+        including data reliability, model robustness, model calibration, utility, and AI influence on human decision-making. <br><br>
+        
+        <i>This tool offers a structured five-step process, but users can select and utilize any specific tool from the suite as needed.</i>
+        
+    </div>
+
+    <div class="separator spacing"></div>
+
+    <div class="container-fluid d-flex h-100 flex-column ">
+        <div class="row">
+            <div class="col-xl-3 col-md-5 col-lg-4 col-sm-12 ">
+                
+                <div class="d-md-none">
+
+                    <button class="open-sidebar btn-primary" id="open-sidebar">
+                        <i id="open-sidebar" class="fa-solid fa-bars"></i>
+                        <span id="open-sidebar" class="sidebarText">TOOLS</span>
+                    </button>
+
+                    <div class="siderbar" id="sidebar">
+
+                        <div class="close-sidebar" id="close-sidebar">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+
+                        <span class="font sidebar-title">TOOLS</span>
+
+                        <ul>
+                            <li id="datareliability-li"        class="li btn drop-btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/', this.id)">
+                                Data Reliability
+                            </li>
+                            <li id="psicorrespondence-li"      class="li btn drop-btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/', this.id)">
+                                Data Similarity
+                            </li> 
+                            <li  id="calibrationassessment-li" class="li btn drop-btn" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/', this.id)">
+                                Model Calibration
+                            </li>
+                            <li id="utility-li"                class="li btn drop-btn" onclick="changeContent('file', 'utility.html', this.id)">
+                                Model Utility
+                            </li>
+                            <li id="qualiml-li"                class="li btn drop-btn" onclick="changeContent('url', 'https://qualiml.pythonanywhere.com/', this.id)">
+                                Model Robustness
+                            </li>
+                            <li id="haiiassessment-li"         class="li btn drop-btn" onclick="changeContent('url', 'https://haiiassessment.pythonanywhere.com/', this.id)">
+                                Human Interaction
+                            </li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="collapse d-md-block" id="sidebar-collapse">
+
+                    <div class="sidebar-title font text-spacing">TOOLS</div>
+
+                    <div class=" sidebar-body">
+                        <ul>
+                            <li id="sidebar-datareliability-li"        class="li btn" onclick="changeContent('url',  'https://datareliability.pythonanywhere.com/', this.id)">
+                                Data Reliability
+                            </li>
+                            <li id="sidebar-psicorrespondence-li"      class="li btn" onclick="changeContent('url', 'https://psicorrespondence.pythonanywhere.com/', this.id)">
+                                Data Similarity
+                            </li>
+                            <li  id="sidebar-calibrationassessment-li" class="li btn" onclick="changeContent('url', 'https://calibrationassessment.pythonanywhere.com/', this.id)">
+                                Model Calibration
+                            </li>
+                            <li id="sidebar-utility-li"                class="li btn" onclick="changeContent('file', 'utility.html', this.id)">
+                                Model Utility
+                            </li>
+                            <li id="sidebar-qualiml-li"                class="li btn" onclick="changeContent('url', 'https://qualiml.pythonanywhere.com/', this.id)">
+                                Model Robustness
+                            </li>
+                            <li id="sidebar-haiiassessment-li"         class="li btn" onclick="changeContent('url', 'https://haiiassessment.pythonanywhere.com/', this.id)">
+                                Human Interaction
+                            </li>
+                        </ul>
+                    </div>
+                    
+                </div>  
+                 
+                
+            </div>
+
+            <div class="col-xl-9 col-md-7 col-lg-8 col-sm-12">
+
+                
+                <div class="row spacing card">
+                    <img id="landing-image" src="./landing-image.svg" alt="? LANDING IMAGE ?"></img> <!-- TODO insert landing-image -->
+                    <iframe id="contentFrame"></iframe>
+                </div>
+                
+            </div>
+        </div>
+
+    </div>
+
+    <div class="separator spacing no-border"></div>
+
+
+    <script type="text/javascript" src="./js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
+</body>
+</html>
