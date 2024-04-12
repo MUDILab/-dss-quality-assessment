@@ -3,9 +3,11 @@ function changeContent(contentType, contentSource, id) {
             
     //setup landing image
     let landingImage = document.getElementById('landing-image');
+    let backLandingImage = document.getElementById('back-landing-image')
     
     if(!landingImage.classList.contains('unshow')){
         landingImage.classList.add('unshow');
+        backLandingImage.classList.add('unshow');
     }
 
 
@@ -23,6 +25,7 @@ function changeContent(contentType, contentSource, id) {
 
 function showLandingPage(){
     let landingImage = document.getElementById('landing-image');
+    let backLandingImage = document.getElementById('back-landing-image')
     let allButtons = document.getElementsByClassName('btn');
     for(let i of allButtons){
         i.style.boxShadow = null;
@@ -31,6 +34,7 @@ function showLandingPage(){
     }
     if(landingImage.classList.contains('unshow')){
         landingImage.classList.remove('unshow');
+        backLandingImage.classList.remove('unshow');
     }
 }
 

@@ -175,6 +175,16 @@ th, td {
     display: block;
     width: 100%;
     border: none;
+    max-width: 700px;
+}
+#back-landing-image{
+    font-size: 16px !important;
+    text-align: center !important;
+    position: absolute;
+    background-color:white;
+    display: block;
+    width: 100%;
+    border: none;
     min-height: 80vh;
 }
 
