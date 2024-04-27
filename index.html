@@ -26,12 +26,12 @@
 <body>
 
     <div id="logo" onclick="showLandingPage()">
-        <img id="logo-image" src="./logo/CQE.svg">
+        <img id="logo-image" src="./logo/logo.svg">
     </div>
 
 
     <div id="title" class="spacing">
-        DSS Quality Assessment
+        AI/ML DSS Quality Assessment
     </div>
         
     <div class="upperDiv spacing">
@@ -39,7 +39,7 @@
 		This online calculator aids in evaluating AI-based decision support systems by examining key areas like <br>
 		data reliability, model robustness, calibration, utility, and AI's effect on human decisions.
 		<br><br>
-        <i>The platform features a structured five-step method, yet users may freely select and use any particular tool below according to their needs.</i>
+        <i>The platform features a structured six-step method, yet users may freely select and use any particular tool below according to their needs.</i>
         
     </div>
 
@@ -126,9 +126,12 @@
                 
                 <div class="row spacing card">
                     <div id="back-landing-image"></div>
-                    <img id="landing-image" src="./landing-image.png" alt="? LANDING IMAGE ?"></img>
-                    
-                    <iframe id="contentFrame"></iframe>
+                    <div id="landing-image-container" class="card">
+                        
+                        <img id="landing-image" src="./landing-image.png" alt="? LANDING IMAGE ?"></img>
+                        <p id="landing-image-figcaption">Detail of "The Combat of Mars and Minerva" (1771, oil on canvas, by Jacques-Louis David  (1748–1825))</p>
+                    </div>
+                    <iframe id="contentFrame" class="unshow"></iframe>
                 </div>
                 
             </div>
@@ -137,6 +140,13 @@
     </div>
 
     <div class="separator spacing no-border"></div>
+    <div class="separator spacing"></div>
+
+    <div class="bottomDiv spacing">
+		<small>	
+		    Tools developed at the MUDI Lab @unimib (<a href="https://mudilab.disco.unimib.it/">https://mudilab.disco.unimib.it/</a>), under the scientific supervision of Prof. Federico Cabitza (federico.cabitza [ at ] <a href="unimib.it">unimib.it</a>) CC BY 4.0 Deed 2024.
+        </small>
+    </div>
 
 
     <script type="text/javascript" src="./js/script.js"></script>

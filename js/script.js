@@ -4,16 +4,23 @@ function changeContent(contentType, contentSource, id) {
     //setup landing image
     let landingImage = document.getElementById('landing-image');
     let backLandingImage = document.getElementById('back-landing-image')
+    let figcaption = document.getElementById('landing-image-figcaption')
+
     
     if(!landingImage.classList.contains('unshow')){
         landingImage.classList.add('unshow');
         backLandingImage.classList.add('unshow');
+        figcaption.classList.add('unshow');
     }
 
 
     let contentFrame = document.getElementById('contentFrame');
     let button = document.getElementById(id);
     console.log(button);
+
+    if(contentFrame.classList.contains('unshow')){
+        contentFrame.classList.remove('unshow');
+    }
     
     setClickedButton(button);
     if (contentType === 'file') {
@@ -26,7 +33,15 @@ function changeContent(contentType, contentSource, id) {
 function showLandingPage(){
     let landingImage = document.getElementById('landing-image');
     let backLandingImage = document.getElementById('back-landing-image')
+    let figcaption = document.getElementById('landing-image-figcaption')
+    
+    let contentFrame = document.getElementById('contentFrame');
     let allButtons = document.getElementsByClassName('btn');
+
+    if(!contentFrame.classList.contains('unshow')){
+        contentFrame.classList.add('unshow');
+    }
+
     for(let i of allButtons){
         i.style.boxShadow = null;
         i.style.color = "rgb(90, 90, 90)";
@@ -35,6 +50,7 @@ function showLandingPage(){
     if(landingImage.classList.contains('unshow')){
         landingImage.classList.remove('unshow');
         backLandingImage.classList.remove('unshow');
+        figcaption.classList.remove('unshow');
     }
 }
 

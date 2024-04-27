@@ -28,6 +28,17 @@
     padding: 0px 20px 40px 20px;
 }
 
+.bottomDiv {
+    margin:auto;
+    width: fit-content;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.2;
+    font-size: 16px;
+    color: #6c757d;
+    text-align: center;
+    padding: 0px 20px 40px 20px;
+}
+
 /*button*/
 .open-sidebar{ 
     padding: 10px 30px;
@@ -170,23 +181,27 @@ th, td {
 #landing-image{
     font-size: 16px !important;
     text-align: center !important;
-    position: absolute;
     background-color:white;
-    display: block;
     width: 100%;
+    border: none;
+    height: auto;
+    max-width: 700px;
+}
+#landing-image-figcaption{
+    font-size: 12px;
+    text-align: right !important;
+    padding-right: 8px;
+    font-style: italic;
+    width: 100%;
+    color:rgb(71, 71, 71);
     border: none;
     max-width: 700px;
 }
-#back-landing-image{
-    font-size: 16px !important;
-    text-align: center !important;
-    position: absolute;
-    background-color:white;
-    display: block;
-    width: 100%;
-    border: none;
-    min-height: 80vh;
+
+#landing-image-container{
+    height: auto;
 }
+
 
 #logo{
     position: absolute;
@@ -195,7 +210,7 @@ th, td {
 }
 #logo-image{
     
-    width: 180px;
+    width: 16%;
     height: auto;
     top:0;
     margin: 15px 0px 0px 30px;
