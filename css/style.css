@@ -10,7 +10,7 @@
     text-align: center; 
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
-    margin: 90px 0px 50px 0px;
+    margin: 120px 0px 50px 0px;
 }
 
 .font {
@@ -210,10 +210,18 @@ th, td {
 }
 #logo-image{
     
-    width: 16%;
+    width: 20%;
     height: auto;
+    
     top:0;
     margin: 15px 0px 0px 30px;
     
 }
 
+
+
+@media screen and (max-width: 730px) {
+    .hidden-on-small {
+        display: none;
+    }
+}
