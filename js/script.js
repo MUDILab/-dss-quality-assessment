@@ -4,13 +4,11 @@ function changeContent(contentType, contentSource, id) {
     //setup landing image
     let landingImage = document.getElementById('landing-image');
     let backLandingImage = document.getElementById('back-landing-image')
-    let figcaption = document.getElementById('landing-image-figcaption')
 
     
     if(!landingImage.classList.contains('unshow')){
         landingImage.classList.add('unshow');
         backLandingImage.classList.add('unshow');
-        figcaption.classList.add('unshow');
     }
 
 
@@ -33,7 +31,6 @@ function changeContent(contentType, contentSource, id) {
 function showLandingPage(){
     let landingImage = document.getElementById('landing-image');
     let backLandingImage = document.getElementById('back-landing-image')
-    let figcaption = document.getElementById('landing-image-figcaption')
     
     let contentFrame = document.getElementById('contentFrame');
     let allButtons = document.getElementsByClassName('btn');
@@ -50,7 +47,6 @@ function showLandingPage(){
     if(landingImage.classList.contains('unshow')){
         landingImage.classList.remove('unshow');
         backLandingImage.classList.remove('unshow');
-        figcaption.classList.remove('unshow');
     }
 }
 
