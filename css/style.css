@@ -127,7 +127,7 @@ li{
     color: rgb(90, 90, 90);
 }
 ul{
-    padding: 0px 20px 0px 20px;
+    padding: 0;
     display: block;
 }
 
@@ -224,4 +224,10 @@ th, td {
     .hidden-on-small {
         display: none;
     }
+    .spacing{
+        
+    margin-left: 10px;
+    margin-right: 10px;
+    }
 }
+
