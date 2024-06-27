@@ -5,12 +5,12 @@
 }
 
 #title {
-    font-size: 50px;
+    font-size: 45px;
     background-color: transparent;
     text-align: center; 
     font-weight: bold;
     font-family: "Open Sans", sans-serif;
-    margin: 120px 0px 50px 0px;
+    margin: 40px 0px 0px 0px;
 }
 
 .font {
@@ -19,13 +19,12 @@
 
 /* Style for the upper div */
 .upperDiv {
-    margin:auto;
     width: fit-content;
-    max-width: 880px;
+    max-width: 1000px;
     font-family:  'arial';
     font-size: 18px;
     text-align: left;
-    padding: 0px 20px 40px 20px;
+    margin: 40px auto 40px auto;
 }
 
 .bottomDiv {
@@ -202,23 +201,26 @@ th, td {
     height: auto;
 }
 
-
 #logo{
-    position: absolute;
-    cursor: pointer;
-    top:0;
+    width: auto;
+    height: 100%;
+    justify-content: center;
 }
 #logo-image{
-    
-    width: 20%;
+    max-height: 100%;
+    max-width: 100%;
+    width: auto;
     height: auto;
-    
-    top:0;
-    margin: 15px 0px 0px 30px;
-    
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
-
-
+#logo-image:hover{
+    cursor: pointer;
+}
 
 @media screen and (max-width: 730px) {
     .hidden-on-small {
